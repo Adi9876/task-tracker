@@ -14,6 +14,68 @@ body {
     padding: 24px 16px 32px 16px;
 }
 
+.app-container.dark {
+    background: #23272f;
+    color: #eee;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+}
+
+.app-container.dark .login-form,
+.app-container.dark .task-form,
+.app-container.dark .task-list,
+.app-container.dark .task-filter {
+    background: transparent;
+    color: #eee;
+}
+
+.app-container.dark .task-item {
+    background: #2d323c;
+    color: #eee;
+}
+
+.app-container.dark .task-item.completed {
+    background: #23272f;
+    color: #888;
+}
+
+.app-container.dark .task-title-input,
+.app-container.dark .task-desc-input,
+.app-container.dark .task-search-input,
+.app-container.dark .task-priority-select,
+.app-container.dark .task-due-date-input {
+    background: #23272f;
+    color: #eee;
+    border: 1px solid #444;
+}
+
+.app-container.dark .task-save-btn {
+    background: #4f8cff;
+    color: #fff;
+}
+
+.app-container.dark .task-cancel-btn {
+    background: #444;
+    color: #eee;
+}
+
+.app-container.dark .task-edit-btn,
+.app-container.dark .task-delete-btn {
+    color: #90b4fa;
+}
+
+.app-container.dark .task-delete-btn {
+    color: #f87171;
+}
+
+.app-container.dark .task-filter button {
+    color: #90b4fa;
+}
+
+.app-container.dark .task-filter button.active,
+.app-container.dark .task-filter button:hover {
+    background: #23272f;
+}
+
 .login-container {
     display: flex;
     justify-content: center;
@@ -126,13 +188,35 @@ body {
     border-radius: 8px;
     padding: 14px 12px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
-    transition: background 0.2s;
+    transition: background 0.2s, color 0.2s, transform 0.25s, opacity 0.25s;
+    opacity: 1;
+    transform: scale(1);
+    animation: fadeInTask 0.3s;
+}
+
+@keyframes fadeInTask {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .task-item.completed {
     background: #e0e7ef;
     text-decoration: line-through;
     color: #888;
+    transition: background 0.2s, color 0.2s, transform 0.25s, opacity 0.25s;
+}
+
+.task-item.removing {
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.25s, transform 0.25s;
 }
 
 .task-main {
