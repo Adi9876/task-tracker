@@ -27,8 +27,11 @@ A simple web app to manag your daily tasks. Add, edit, complete, and delete tsks
 
 ## 🔗 Live Demo
 
-*.*
+*https://task-tracker-gpw5380wg-adis-projects-8ba446b5.vercel.app/*
 
 ## 🖼 Screenshots
 
-*.*
+![Image 1](./image1.png)
+![Image 2](./image2.png)
+![Image 3](./image3.png)
+
